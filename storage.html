@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="storage.css">
+    <link rel="stylesheet" href="normalize.css">
+    <title>Store</title>
+</head>
+
+<body>
+    <header>
+        <div class="header__navigation">
+            <nav>
+                <ul class="header__navigation-getTo">
+                    <li class="header__navigation-list"><a href="" class="header__navigation-links">Каталог</a></li>
+                    <li class="header__navigation-list"><a href="" class="header__navigation-links">Мои заказы</a></li>
+                    <li class="header__navigation-list"><a href="" class="header__navigation-links">Избранное</a></li>
+                    <li class="header__navigation-list"><a href="" class="header__navigation-links">Профиль</a></li>
+                    <li class="header__navigation-list"><a href="cart.html" class="header__navigation-links">Корзина</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="main">
+        <div class="main__navigation">
+            <ul>
+                <li class="navigation__categorie"> <button class="dropdown-button" onclick="toggleMenu(this)">Молочная
+                        продукция, сыр, яйца</button>
+                    <ul class="dropdown">
+                        <li class="navigation__categorie-product"><button data-show="milk"
+                                class="btn-product">Молоко</button></li>
+                        <li class="navigation__categorie-product"><button data-show="cheese" class="btn-product">Сыр,
+                                творог</button></li>
+                        <li class="navigation__categorie-product"><button data-show="egg"
+                                class="btn-product">Яйца</button></li>
+                    </ul>
+                </li>
+                <li class="navigation__categorie"><button class="dropdown-button" onclick="toggleMenu(this)">Вода,
+                        напитки</button>
+                    <ul class="dropdown">
+                        <li class="navigation__categorie-product"><button data-show="water"
+                                class="btn-product">Вода</button></li>
+                        <li class="navigation__categorie-product"><button data-show="juice"
+                                class="btn-product">Соки</button></li>
+                        <li class="navigation__categorie-product"><button data-show="soda"
+                                class="btn-product">Газировка</button></li>
+                    </ul>
+                </li>
+                <li class="navigation__categorie"><button class="dropdown-button" onclick="toggleMenu(this)">Товары для
+                        животных</button>
+                    <ul class="dropdown">
+                        <li class="navigation__categorie-product"><button data-show="dogTreats" class="btn-product">Для
+                                собак</button></li>
+                        <li class="navigation__categorie-product"><button data-show="catTreats" class="btn-product">Для
+                                котов</button></li>
+                    </ul>
+                </li>
+                <li class="navigation__categorie"><button class="dropdown-button" onclick="toggleMenu(this)">Макароны,
+                        Крупы</button>
+                    <ul class="dropdown">
+                        <li class="navigation__categorie-product"><button data-show="pastas"
+                                class="btn-product">Макароны</button></li>
+                        <li class="navigation__categorie-product"><button data-show="cereals"
+                                class="btn-product">Крупы</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="main__slider" >
+            <div class="slider" data-slider></div>
+            <button class="main__slider-prevbutton" data-btn-prev><</button>
+            <button class="main__slider-nextbutton" data-btn-next>></button>
+        </div>
+    </div>
+    <div class="storage">
+        <div id="productList" class="storage__products"></div>
+    </div>
+    <script src="storage.js" defer></script>
+    <script src="show.js" defer></script>
+    <script src="slider.js" defer></script>
+</body>
+
+</html>
