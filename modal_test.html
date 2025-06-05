@@ -1,31 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/modal_test.css">
-    <title>Cart</title>
+    <title>Document</title>
 </head>
-
 <body>
-    <div class="container">
-        <div class="shopingCart">
-            <h2>Корзина покупок</h2>
-            <div id="cartList">
-                <div class="cart-item">
-                </div>
-            </div>
-            <div class="total">
-                <div class="line"></div>
-                <div class="totalPrice"></div>
-                <button class="buy" onclick="showModal()">Оформить заказ</button>
-            </div>
-        </div>
-    </div>
-
-
     <div class="modal">
         <div class="modal__window">
             <h2>Ваш заказ</h2>
@@ -36,8 +17,9 @@
         <div class="overlay"></div>
     </div>
 
-    <script src="js/cart.js"></script>
-
+    <div class="openModal">
+        <button class="btn-open">Оформить заказ</button>
+    </div>
+    <script src="js/modal_test.js"></script>
 </body>
-
 </html>

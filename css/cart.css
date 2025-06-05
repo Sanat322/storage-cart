@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: #caf4fa;
+    box-sizing: border-box;
+}
+
+* {
+    font-family: "inter", "sans-serif";
+}
+
+.shopingCart {
+    width: 800px;
+    background-color: #f6f6f6;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.product__image-name {
+    width: 198px;
+    height: 180px;
+
+}
+
+.info-group {
+    width: 400px;
+    height: 50px;
+    display: block;
+    position: relative;
+    left: 400px;
+    bottom: 100px;
+}
+
+.product-image {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+}
+
+.product-volume {
+    padding-left: 20px;
+}
+
+
+.plus-button,
+.minus-button {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+    font-size: medium;
+    font-weight: 200;
+    margin-right: 25px;
+    margin-left: 25px;
+    text-align: center;
+}
+
+.delete-button {
+    height: 30px;
+    width: 105px;
+    border-radius: 25px;
+    border: none;
+    font-size: medium;
+    font-weight: 200;
+    position: relative;
+    color: #ffff;
+    background-color: #1c67d9;
+
+}
+
+.delete-button:hover {
+    background-color: #d34848;
+}
+
+.plus-button:hover,
+.minus-button:hover {
+    background-color: #3191ec;
+    animation-delay: 100ms;
+}
+
+
+.product-image-picture {
+    width: 150px;
+    height: 150px;
+}
+
+.product-name {
+    display: block;
+    font-weight: 800;
+    margin-right: 100px;
+    width: 150px;
+    padding-left: 10px;
+}
+
+.product-volume {
+    position: relative;
+    font-size: 10px;
+    display: block;
+    padding-left: 60px;
+}
+
+.cart-item {
+    position: relative;
+}
+
+span {
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.line {
+    height: 1px;
+    width: 40%;
+    float: right;
+    background-color: #000000;
+
+}
+
+.total {
+    position: relative;
+    bottom: 20px;
+}
+
+.totalPrice {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+    position: relative;
+    left: 580px;
+}
+
+.buy {
+    height: 30px;
+    width: 135px;
+    position: relative;
+    left: 600px;
+    border-radius: 25px;
+    border: none;
+    font-size: medium;
+    font-weight: 200;
+    position: relative;
+    color: #ffff;
+    background-color: #1c67d9;
+
+}
+
+.buy:hover {
+    background-color: #91b7ef;
+}
+
+a {
+    text-decoration: none;
+    color: #ffff;
+}

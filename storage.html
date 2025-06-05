@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="storage.css">
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="css/storage.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <title>Store</title>
 </head>
 
@@ -15,7 +15,7 @@
             <nav>
                 <ul class="header__navigation-getTo">
                     <li class="header__navigation-list"><a href="" class="header__navigation-links">Каталог</a></li>
-                    <li class="header__navigation-list"><a href="" class="header__navigation-links">Мои заказы</a></li>
+                    <li class="header__navigation-list"><a href="orders.html" class="header__navigation-links">Мои заказы</a></li>
                     <li class="header__navigation-list"><a href="" class="header__navigation-links">Избранное</a></li>
                     <li class="header__navigation-list"><a href="" class="header__navigation-links">Профиль</a></li>
                     <li class="header__navigation-list"><a href="cart.html" class="header__navigation-links">Корзина</a>
@@ -71,16 +71,16 @@
         </div>
         <div class="main__slider" >
             <div class="slider" data-slider></div>
-            <button class="main__slider-prevbutton" data-btn-prev><</button>
-            <button class="main__slider-nextbutton" data-btn-next>></button>
+            <button class="main__slider-prevbutton" data-btn-prev>&larr;</button>
+            <button class="main__slider-nextbutton" data-btn-next>&rarr;</button>
         </div>
     </div>
     <div class="storage">
         <div id="productList" class="storage__products"></div>
     </div>
-    <script src="storage.js" defer></script>
-    <script src="show.js" defer></script>
-    <script src="slider.js" defer></script>
+    <script src="js/storage.js" defer></script>
+    <script src="js/show.js" defer></script>
+    <script src="js/slider.js" defer></script>
 </body>
 
 </html>
