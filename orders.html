@@ -4,21 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/orders.css">
+    <link rel="stylesheet" href="css/storage.css">
     <title>Document</title>
 </head>
 <body>
     <header>
         <div class="header__navigation">
-            <nav>
-                <ul class="header__navigation-getTo">
-                    <li class="header__navigation-list"><a href="storage.html" class="header__navigation-links">Каталог</a></li>
-                    <li class="header__navigation-list"><a href="orders.html" class="header__navigation-links">Мои заказы</a></li>
-                    <li class="header__navigation-list"><a href="" class="header__navigation-links">Избранное</a></li>
-                    <li class="header__navigation-list"><a href="" class="header__navigation-links">Профиль</a></li>
-                    <li class="header__navigation-list"><a href="cart.html" class="header__navigation-links">Корзина</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="header__container-logo">
+                <a href="storage.html" class="header__logo">
+                    <div class="header__logo-icon"></div>
+                </a>
+            </div>
+            <div class="header__container-search">
+                <input type="text" class="search-input" placeholder="поиск продукта">
+            </div>
+            <div class="header__container-location">
+                <a href="#" class="header__location">
+                    <div class="header__location-icon">
+                        <img src="icons/location-svgrepo-com.svg" class="location-image" alt="">
+                        <span class="header__location-desc">Укажите адрес доставки</span>
+                    </div>
+                </a>
+            </div>
+            <div class="header__container-profile">
+                <a href="orders.html" class="header__profile">
+                    <div class="header__profile-icon">
+                        <img src="icons/profile-svgrepo-com.svg" class="profile-image" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="header__container-cart">
+                <a href="cart.html" class="header__cart">
+                    <div class="header__cart-button">
+                        <img src="icons/cart-3-svgrepo-com.svg" class="cart-image" alt="">
+                        <span class="header__cart-desc">Корзина</span>
+                    </div>
+                </a>
+            </div>
         </div>
     </header>
     <div id="userContainer">

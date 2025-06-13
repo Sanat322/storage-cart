@@ -2,10 +2,17 @@
 function showCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartList = document.getElementById('cartList');
-    cartList.innerHTML = ''; 
+    cartList.innerHTML = '';
 
     if (cart.length === 0) {
         cartList.textContent = 'Корзина пуста';
+        const empty = document.createElement('img');
+        empty.src = ('img/sad-cart.png')
+        empty.classList.add('empty-cart');
+        cartList.appendChild(empty);
+
+        const oldTotal = document.querySelector('.totalPrice');
+        if (oldTotal) oldTotal.remove();
         return;
     }
 
@@ -75,13 +82,10 @@ function showCart() {
     let totalPriceElem = document.querySelector('.totalPrice');
     if (!totalPriceElem) {
         totalPriceElem = document.createElement('div');
+        totalPriceElem.classList.add('totalPrice');
         cartList.appendChild(totalPriceElem);
     }
     totalPriceElem.textContent = `Общая сумма: $${total.toFixed(2)}`;
-}
-function clearcart() {
-    localStorage.removeItem('cart');
-    location.reload(); 
 }
 
 function updateItemCount(id, change) {
@@ -95,7 +99,7 @@ function updateItemCount(id, change) {
     } else {
         localStorage.setItem('cart', JSON.stringify(cart));
     }
-    showCart(); 
+    showCart();
 }
 
 function removeItem(id) {
@@ -117,22 +121,37 @@ transition: 300ms ease-in-out;
 `;
 
 function showModal() {
-    modalElem.style.visibility = 'visible';
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if (cart.length === 0){
+        alert('Ваша корзина пуста!');
+        return;
+    }
+    else {
+        modalElem.style.visibility = 'visible';
     modalElem.style.opacity = 1;
-};
+}
+}
 
 function closeModal() {
-        modalElem.style.visibility = 'hidden';
-        modalElem.style.opacity = 0;
-        modalElem.style.transition = '300ms ease-out';
+    modalElem.style.visibility = 'hidden';
+    modalElem.style.opacity = 0;
+    modalElem.style.transition = '300ms ease-out';
 }
 
 openBtn.addEventListener('click', showModal);
 closeBtn.addEventListener('click', closeModal);
 
+
+function handleContinue() {
+    saveOrder();
+    closeModal();
+}
+
 // конец 
 
-function saveOrder(){
+
+// сохранение заказа
+function saveOrder() {
     const list = JSON.parse(localStorage.getItem('cart')) || [];
     const order = {
         id: Date.now(),
@@ -149,14 +168,10 @@ function saveOrder(){
     location.reload();
 }
 
-function handleContinue(){
-    saveOrder();
-    closeModal();
-}
 
 window.addEventListener('storage', (event) => {
     if (event.key === 'cart') {
-        showCart(); 
+        showCart();
     }
 });
 document.addEventListener('DOMContentLoaded', showCart);

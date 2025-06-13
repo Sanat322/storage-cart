@@ -6,10 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/modal_test.css">
+    <link rel="stylesheet" href="css/storage.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <title>Cart</title>
 </head>
 
 <body>
+    <header>
+        <div class="header__navigation">
+            <div class="header__container-logo">
+                <a href="storage.html" class="header__logo">
+                    <div class="header__logo-icon"></div>
+                </a>
+            </div>
+            <div class="header__container-search">
+                <input type="text" class="search-input" placeholder="поиск продукта">
+            </div>
+            <div class="header__container-location">
+                <a href="#" class="header__location">
+                    <div class="header__location-icon">
+                        <img src="icons/location-svgrepo-com.svg" class="location-image" alt="">
+                        <span class="header__location-desc">Укажите адрес доставки</span>
+                    </div>
+                </a>
+            </div>
+            <div class="header__container-profile">
+                <a href="orders.html" class="header__profile">
+                    <div class="header__profile-icon">
+                        <img src="icons/profile-svgrepo-com.svg" class="profile-image" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="header__container-cart">
+                <a href="cart.html" class="header__cart">
+                    <div class="header__cart-button">
+                        <img src="icons/cart-3-svgrepo-com.svg" class="cart-image" alt="">
+                        <span class="header__cart-desc">Корзина</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
     <div class="container">
         <div class="shopingCart">
             <h2>Корзина покупок</h2>
@@ -20,7 +57,7 @@
             <div class="total">
                 <div class="line"></div>
                 <div class="totalPrice"></div>
-                <button class="buy" onclick="showModal()">Оформить заказ</button>
+                <button class="buy">Оформить заказ</button>
             </div>
         </div>
     </div>
@@ -30,8 +67,9 @@
         <div class="modal__window">
             <h2>Ваш заказ</h2>
             <p class="modal__desc">Cумма заказа</p>
+            <div class="totalPrice"></div>
             <button class="btn-continue" onclick="handleContinue()">Продолжить</button>
-            <button class="btn-close">&#10005;</button>
+            <button class="btn-close" onclick="closeModal()">&#10005;</button>
         </div>
         <div class="overlay"></div>
     </div>

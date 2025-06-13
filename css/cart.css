@@ -108,11 +108,6 @@ h2 {
     position: relative;
 }
 
-span {
-
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
 .line {
     height: 1px;
     width: 40%;
@@ -124,21 +119,20 @@ span {
 .total {
     position: relative;
     bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }
 
 .totalPrice {
     font-weight: bold;
     font-size: 18px;
-    margin-top: 20px;
-    position: relative;
-    left: 580px;
+    margin-top: 50px;
 }
 
 .buy {
     height: 30px;
     width: 135px;
-    position: relative;
-    left: 600px;
     border-radius: 25px;
     border: none;
     font-size: medium;
@@ -146,14 +140,17 @@ span {
     position: relative;
     color: #ffff;
     background-color: #1c67d9;
-
 }
 
 .buy:hover {
     background-color: #91b7ef;
 }
 
-a {
-    text-decoration: none;
-    color: #ffff;
+.empty-cart{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    position: relative;
+    right: 100px;
+    bottom: 10px;
 }

@@ -1,0 +1,127 @@
+.catalog {
+    margin-bottom: 20px;
+}
+
+.catalog__container {
+    margin: 0 auto;
+
+}
+
+.categorySlider {
+    height: 350px;
+    width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-color: #fff;
+    justify-content: flex-start;
+}
+
+
+.categorySlider::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+}
+
+.catalog__desc{
+    text-align: center;
+    margin-right: 35px;
+}
+.produce {
+    width: 200px;
+}
+
+.item__slider {
+    height: 150px;
+    width: 150px;
+}
+
+.item__image-picture-slide {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: 1px solid black;
+    border-radius: 25px;
+    text-align: center;
+
+}
+
+.item__add-slide {
+    width: 200px;
+    height: 150px;
+    text-align: left;
+}
+
+.item__add-slide-info {
+    width: 200px;
+}
+
+.item__add-description-slide {
+    font-size: 13px;
+}
+
+.item__add-capacity-slide {
+    font-size: 11px;
+}
+
+.item__add-price-slide {
+    font-size: 11px;
+}
+
+.item__buttons-slide {
+    padding-left: 10px;
+}
+
+.decrement-slide {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+    font-size: medium;
+    font-weight: 200;
+    margin-right: 25px;
+}
+
+.count-slide {
+    margin-right: 20px;
+}
+
+.increment-slide {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+    font-size: medium;
+    font-weight: 200;
+    margin-right: 25px;
+    text-align: center;
+}
+
+.addSliderProduce {
+    width: 100px;
+    height: 30px;
+    color: #ffff;
+    background-color: #1c67d9;
+    border: none;
+    border-radius: 10px;
+    margin: 10px 0 0 15px;
+}
+
+.catalog__container-buttons {
+  text-align: center;
+  margin-right: 45px;
+  margin-bottom: 5px;
+}
+
+.catalog__container-buttonLeft,
+.catalog__container-buttonRight {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: #1c67d9;
+    color: #fff;
+    
+}

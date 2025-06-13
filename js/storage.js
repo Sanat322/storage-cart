@@ -4,19 +4,41 @@ const products = {
     milkProducts: {
         milk: [
             {
-                name: "Lactel 3.2%",
-                id: 'lactel-3.2',
+                name: "Молоко Айс 3.2%",
+                id: 'ais-3.2',
                 price: 1.5,
                 volume: "1000ml",
-                image: 'lactel3.2%.webp'
+                image: "ais32.webp"
             },
             {
-                name: "Lactel 2,5%",
-                id: 'lactel-2.5',
+                name: "Молоко Айс 2,5%",
+                id: 'ais-2.5',
                 price: 1.5,
                 volume: "1000ml",
-                image: "lactel2.5%.webp"
+                image: "ais25.jpg"
+            },
+            {
+                name: "Молоко миндальное Alpro",
+                id: 'alpro-almond',
+                price: 3,
+                volume: "1000ml",
+                image: "alpro-almond.webp"
+            },
+            {
+                name: "Молоко кокосовое Alpro",
+                id: 'alpro-coconut',
+                price: 3,
+                volume: "1000ml",
+                image: "alpro-coconut.webp"
+            },
+            {
+                name: "Молоко Шадринское 7.1%",
+                id: 'shadrinkoe-71',
+                price: 2,
+                volume: "500ml",
+                image: "shadrinskoe-71.jpg"
             }
+
         ],
 
         cheese: [
@@ -69,7 +91,27 @@ const products = {
                 volume: "500ml",
                 image: 'borjomi.webp'
             }
-
+            , {
+                name: "Вода Асем Ай б/г",
+                id: 'asemai-bezg',
+                price: 0.99,
+                volume: "1000ml",
+                image: 'asemai-bezgaza.webp'
+            },
+            {
+                name: "Вода Асем Ай г.",
+                id: 'asemai-sg',
+                price: 0.99,
+                volume: "1000ml",
+                image: 'asemai-s-gazom.webp'
+            },
+            {
+                name: "Вода Набеглави минеральная",
+                id: 'nabeglavi',
+                price: 1.25,
+                volume: "1000ml",
+                image: 'nabeglavi.webp'
+            }
         ],
         juice: [
             {
@@ -85,8 +127,28 @@ const products = {
                 price: 3.79,
                 volume: "1000ml",
                 image: 'VilaDiniCherry.webp'
+            },
+            {
+                name: "Сок Rich Вишня",
+                id: 'rich-cherry',
+                price: 3.49,
+                volume: "1000ml",
+                image: 'juice-rich-cherry.webp'
+            },
+            {
+                name: "Сок Rich Апельсин",
+                id: 'rich-orange',
+                price: 3.49,
+                volume: "1000ml",
+                image: 'juice-rich-orange.webp'
+            },
+            {
+                name: "Сок Piko Яблоко",
+                id: 'piko-apple',
+                price: 2,
+                volume: "1000ml",
+                image: 'juice-piko-apple.webp'
             }
-
         ],
         soda: [
             {
@@ -157,7 +219,7 @@ const products = {
                 image: 'BarillaMaccheroni-450.webp'
             }
         ],
-        cereal:[
+        cereal: [
             {
                 name: "Рис Makfa Круглозерный",
                 id: 'makfa-rice',
@@ -165,12 +227,112 @@ const products = {
                 volume: "800g",
                 image: 'MakfaRice.webp'
             },
-             {
-                name: "дрица Makfa Круглозерный",
+            {
+                name: "Ядрица Makfa Гречка",
                 id: 'makfa-grechka',
                 price: 2,
                 volume: "800g",
                 image: 'MakfaGrechka.webp'
+            }
+        ]
+    },
+    meatAndFish: {
+        beefMeat: [
+            {
+                name: "Мякоть говядины постная",
+                id: 'lean-beef',
+                price: 17,
+                volume: "1000g",
+                image: 'Lean-beef.png'
+            },
+            {
+                name: "Говяжья печень",
+                id: 'beef-liver',
+                price: 5.5,
+                volume: "1000g",
+                image: 'beef-liver.webp'
+            }
+        ],
+        chickenMeat:[
+            {
+                name: "Филе Курочка Ряба",
+                id: 'chicken-breast',
+                price: 3.5,
+                volume: "1000g",
+                image: 'chicken-breast.webp'
+            },
+            {
+                name: "Бедро курицы",
+                id: 'chicken-thighs',
+                price: 5.5,
+                volume: "1000g",
+                image: 'chicken-thighs.webp'
+            }
+        ],
+        fishAndSeafood:[
+            {
+                name: "Форель Семь Морей стейки",
+                id: 'trout-steak',
+                price: 21,
+                volume: "1000g",
+                image: 'trout-steak.webp'
+            },
+            {
+                name: "Скамбрия замороженная",
+                id: 'mackerel-frozen',
+                price: 11,
+                volume: "1000g",
+                image: 'mackerel-frozen.webp'
+            }
+        ]
+    },
+    breadAndCakes: {
+        ordinaryBread: [
+            {
+                name: "Хлеб Harry's пшеничный",
+                id: 'harrys-blue',
+                price: 1.5,
+                volume: "470g",
+                image: 'bread-harrys-blue.webp'
+            },
+            {
+                name: "Хлеб Harry's с отрубями",
+                id: 'harrys-yellow',
+                price: 1.5,
+                volume: "470g",
+                image: 'bread-harrys-yellow.webp'
+            }
+        ],
+        breadCakes:[
+            {
+                name: "Кекс Ragout из банана",
+                id: 'cake-ragout',
+                price: 4.9,
+                volume: "120g",
+                image: 'banana-cake.webp'
+            },
+            {
+                name: "Штрудель с яблоком и грецким орехом",
+                id: 'strudel',
+                price: 3.5,
+                volume: "180g",
+                image: 'strudel.webp'
+            }
+        ],
+        pitaBread:[
+            {
+                name: "Тортилья Aly мультивитаминная",
+                id: 'tortilla-aly',
+                price: 4.5,
+                volume: "420g",
+                image: 'tortilla-aly.webp'
+            },
+            {
+                name: "Лепешки Mission Super Soft",
+                id: 'tortilla-mission',
+                price: 2.3,
+                volume: "250g",
+                image: 'tortilla-mission.webp'
             }
         ]
     }

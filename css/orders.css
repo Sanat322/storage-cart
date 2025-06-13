@@ -6,7 +6,9 @@ body {
     margin: 0;
 
 }
-
+a{
+    text-decoration: none;
+}
 * {
     font-family: "inter", "sans-serif";
 }
@@ -18,46 +20,6 @@ header{
     z-index: 1;
     margin: 0;
     padding: 0;
-}
-
-.header__navigation {
-    display: inline;
-    height: 200px;
-}
-
-.header__navigation-getTo {
-    text-align: center;
-    height: 50px;
-    padding: 20px 0 0 100px;
-    margin: 0 0 20px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    
-}
-
-.header__navigation-list {
-    display: inline;
-    margin-right: 100px;
-    
-}
-
-.header__navigation-links {
-    font-size: 20px;
-    font-weight: 500;
-    text-decoration: none;
-    color: #000 ;
-}
-
-.header__navigation-links:hover {
-    font-size: 20px;
-    font-weight: 800;
-    color: #91b7ef;
-}
-
-
-
-
-#userContainer{
-
 }
 
 .orderDiv{

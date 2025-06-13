@@ -6,81 +6,203 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/storage.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/modal_test.css">
+    <link rel="stylesheet" href="css/storage-catalog.css">
     <title>Store</title>
 </head>
 
 <body>
+    <div class="modal__category" id="modalCategory">
+        <div class="modal__category-content">
+            <button class="modal__category-closeBtn" onclick="closeCategoryModal()">x</button>
+            <div class="storage">
+                <div id="productList" class="storage__products">
+                </div>
+                <button id="addSelectedToCart" onclick="addSelectedToCart(this)">Добавить в корзину</button>
+            </div>
+        </div>
+    </div>
     <header>
+
         <div class="header__navigation">
-            <nav>
-                <ul class="header__navigation-getTo">
-                    <li class="header__navigation-list"><a href="" class="header__navigation-links">Каталог</a></li>
-                    <li class="header__navigation-list"><a href="orders.html" class="header__navigation-links">Мои заказы</a></li>
-                    <li class="header__navigation-list"><a href="" class="header__navigation-links">Избранное</a></li>
-                    <li class="header__navigation-list"><a href="" class="header__navigation-links">Профиль</a></li>
-                    <li class="header__navigation-list"><a href="cart.html" class="header__navigation-links">Корзина</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="header__container-logo">
+                <a href="storage.html" class="header__logo">
+                    <div class="header__logo-icon"></div>
+                </a>
+            </div>
+            <div class="header__container-search">
+                <input type="text" id="searchInput" class="search-input" placeholder="поиск продукта">
+                <div class="search-result" id="searchResult" style="display: none;"></div>
+            </div>
+            <div class="header__container-location">
+                <a href="#" class="header__location">
+                    <div class="header__location-icon">
+                        <img src="icons/location-svgrepo-com.svg" class="location-image" alt="">
+                        <span class="header__location-desc">Укажите адрес доставки</span>
+                    </div>
+                </a>
+            </div>
+            <div class="header__container-profile">
+                <a href="" class="header__profile" onclick=" event.preventDefault(); showModal()">
+                    <div class="header__profile-icon">
+                        <img src="icons/profile-svgrepo-com.svg" class="profile-image" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="header__container-cart">
+                <a href="cart.html" class="header__cart">
+                    <div class="header__cart-button">
+                        <img src="icons/cart-3-svgrepo-com.svg" class="cart-image" alt="">
+                        <span class="count-all">0</span>
+                        <span class="header__cart-desc">Корзина</span>
+                    </div>
+                </a>
+            </div>
         </div>
     </header>
     <div class="main">
         <div class="main__navigation">
             <ul>
-                <li class="navigation__categorie"> <button class="dropdown-button" onclick="toggleMenu(this)">Молочная
+                <li class="navigation__categorie"><button class="dropdown-button" onclick="toggleMenu(this)"><img
+                            src="icons/milk-svgrepo-com.svg" class="navigation__categorie-product-icon" alt="">Молочная
                         продукция, сыр, яйца</button>
                     <ul class="dropdown">
                         <li class="navigation__categorie-product"><button data-show="milk"
-                                class="btn-product">Молоко</button></li>
-                        <li class="navigation__categorie-product"><button data-show="cheese" class="btn-product">Сыр,
-                                творог</button></li>
+                                class="btn-product"><span>Молоко</span></button></li>
+                        <li class="navigation__categorie-product"><button data-show="cheese"
+                                class="btn-product"><span>Сыр,
+                                    творог</span></button></li>
                         <li class="navigation__categorie-product"><button data-show="egg"
-                                class="btn-product">Яйца</button></li>
+                                class="btn-product"><span>Яйца</span></button></li>
                     </ul>
                 </li>
-                <li class="navigation__categorie"><button class="dropdown-button" onclick="toggleMenu(this)">Вода,
+                <li class="navigation__categorie"><button class="dropdown-button" onclick="toggleMenu(this)"><img
+                            src="icons/cola-svgrepo-com.svg" class="navigation__categorie-product-icon" alt="">Вода,
                         напитки</button>
                     <ul class="dropdown">
-                        <li class="navigation__categorie-product"><button data-show="water"
-                                class="btn-product">Вода</button></li>
+                        <li class="navigation__categorie-product"> <button data-show="water"
+                                class="btn-product"><span>Вода</span></button></li>
                         <li class="navigation__categorie-product"><button data-show="juice"
-                                class="btn-product">Соки</button></li>
+                                class="btn-product"><span>Соки</span></button></li>
                         <li class="navigation__categorie-product"><button data-show="soda"
-                                class="btn-product">Газировка</button></li>
+                                class="btn-product"><span>Газировка</span></button></li>
                     </ul>
                 </li>
-                <li class="navigation__categorie"><button class="dropdown-button" onclick="toggleMenu(this)">Товары для
+                <li class="navigation__categorie"><button class="dropdown-button" onclick="toggleMenu(this)"><img
+                            src="icons/pet-food-pet-svgrepo-com.svg" class="navigation__categorie-product-icon"
+                            alt="">Товары для
                         животных</button>
                     <ul class="dropdown">
-                        <li class="navigation__categorie-product"><button data-show="dogTreats" class="btn-product">Для
-                                собак</button></li>
-                        <li class="navigation__categorie-product"><button data-show="catTreats" class="btn-product">Для
-                                котов</button></li>
+                        <li class="navigation__categorie-product"><button data-show="dogTreats"
+                                class="btn-product"><span>Для
+                                    собак</span></button></li>
+                        <li class="navigation__categorie-product"><button data-show="catTreats"
+                                class="btn-product"><span>Для
+                                    котов</span></button></li>
                     </ul>
                 </li>
-                <li class="navigation__categorie"><button class="dropdown-button" onclick="toggleMenu(this)">Макароны,
-                        Крупы</button>
+                <li class="navigation__categorie"><button class="dropdown-button" onclick="toggleMenu(this)"><img
+                            src="icons/cereal-svgrepo-com.svg" class="navigation__categorie-product-icon"
+                            alt="">Бакалея</button>
                     <ul class="dropdown">
                         <li class="navigation__categorie-product"><button data-show="pastas"
-                                class="btn-product">Макароны</button></li>
+                                class="btn-product"><span>Макароны</span></button></li>
                         <li class="navigation__categorie-product"><button data-show="cereals"
-                                class="btn-product">Крупы</button></li>
+                                class="btn-product"><span>Крупы</span></button></li>
+                    </ul>
+                </li>
+                <li class="navigation__categorie"><button class="dropdown-button" onclick="toggleMenu(this)"><img
+                            src="icons/meat-food-eat-cooking-bbq-svgrepo-com.svg"
+                            class="navigation__categorie-product-icon" alt="">Мясо,Птица и Рыба</button>
+                    <ul class="dropdown">
+                        <li class="navigation__categorie-product"><button data-show="beef"
+                                class="btn-product"><span>Мясо</span></button></li>
+                        <li class="navigation__categorie-product"><button data-show="chicken"
+                                class="btn-product"><span>Курица</span></button></li>
+                        <li class="navigation__categorie-product"><button data-show="fish"
+                                class="btn-product"><span>Рыба и Морепродукты</span></button></li>
+                    </ul>
+                </li>
+                <li class="navigation__categorie"><button class="dropdown-button" onclick="toggleMenu(this)"><img
+                            src="icons/bread-svgrepo-com.svg"
+                            class="navigation__categorie-product-icon" alt="">Хлеба</button>
+                    <ul class="dropdown">
+                        <li class="navigation__categorie-product"><button data-show="bread"
+                                class="btn-product"><span>Хлеб</span></button></li>
+                        <li class="navigation__categorie-product"><button data-show="cakes"
+                                class="btn-product"><span>Выпечка</span></button></li>
+                        <li class="navigation__categorie-product"><button data-show="pita"
+                                class="btn-product"><span>Лаваш</span></button></li>
                     </ul>
                 </li>
             </ul>
         </div>
-        <div class="main__slider" >
+        <div class="main__slider">
             <div class="slider" data-slider></div>
             <button class="main__slider-prevbutton" data-btn-prev>&larr;</button>
             <button class="main__slider-nextbutton" data-btn-next>&rarr;</button>
         </div>
+
+
     </div>
-    <div class="storage">
-        <div id="productList" class="storage__products"></div>
+
+    <div class="catalog">
+        <div class="catalog__container">
+            <h2 class="catalog__desc">Вода</h2>
+            <div class="catalog__container-buttons">
+                <button class="catalog__container-buttonLeft">&#8592;</button>
+                <button class="catalog__container-buttonRight">&#8594;</button>
+            </div>
+            <div class="categorySlider" data-show="water">
+            </div>
+        </div>
+        <div class="catalog__container">
+            <h2 class="catalog__desc">Соки и Морсы</h2>
+            <div class="catalog__container-buttons">
+                <button class="catalog__container-buttonLeft">&#8592;</button>
+                <button class="catalog__container-buttonRight">&#8594;</button>
+            </div>
+            <div class="categorySlider" data-show="juice">
+            </div>
+        </div>
+        <div class="catalog__container">
+            <h2 class="catalog__desc">Молоко</h2>
+            <div class="catalog__container-buttons">
+                <button class="catalog__container-buttonLeft">&#8592;</button>
+                <button class="catalog__container-buttonRight">&#8594;</button>
+            </div>
+            <div class="categorySlider" data-show="milk">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="banner">
+        <a class="banner__link">
+            <div class="banner__button"><span class="banner__button-desc">перейти по ссылке</span></div>
+        </a>
+    </div>
+
+    <div class="modal">
+        <div class="modal__window">
+            <img src="icons/fruit-cartoon-face-smiling-fruits_melon-512.webp" class="modal__image" alt="">
+            <h2>Добро пожаловать в Melon</h2>
+            <p class="modal__desc">Введите телефон для продолжения</p>
+            <input type="tel" name="userTel" id="" class="modal__input">
+            <button class="btn-continue" onclick="handleContinue()">Продолжить</button>
+            <button class="btn-close" onclick="closeModal()">&#10005;</button>
+        </div>
+        <div class="overlay"></div>
+        <div id="popup-message"
+            style="display:none; position:fixed; top:10px; right:10px; background:#4caf50; color:white; padding:10px; border-radius:5px; z-index:9999;">
+            Добавлено в корзину</div>
+
     </div>
     <script src="js/storage.js" defer></script>
-    <script src="js/show.js" defer></script>
-    <script src="js/slider.js" defer></script>
+    <script src="js/storage-show.js" defer></script>
+    <script src="js/storage-slider.js" defer></script>
+    <script src="js/storage-catalog.js" defer></script>
+    <script src="js/search.js" defer></script>
 </body>
 
 </html>
